@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    color: #222;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  body.dark {
+    background: #222;
+    color: #f0f0f0;
+  }
+  
+  button {
+    border: 0;
+    background: #0087cc;
+    border-radius: 4px;
+    box-shadow: 0 5px 0 #006599;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    margin: 10px 5px;
+    outline: 0;
+    padding: 12px 20px;
+    transition: all .1s linear;
+  }
+  
+  button:active {
+    box-shadow: 0 2px 0 #006599;
+    transform: translateY(3px);
+  }
+  
+  .logo {
+    width: 120px;
+    height: 120px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    border-radius: 50%;
+    margin: 40px auto;
+    box-shadow: 0 0 10px #0087cc;
+    opacity: 0.9;
+    transition: box-shadow 0.5s, transform 0.5s;
+  }
+  
+  /* Animation keyframes */
+  @keyframes logo-anim {
+    0% {
+      filter: blur(0px);
+      transform: rotate(0deg) scale(1);
+      box-shadow: 0 0 10px #0087cc;
+      opacity: 0.9;
+    }
+    50% {
+      filter: blur(8px);
+      transform: rotate(-15deg) scale(1.2);
+      box-shadow: 0 0 30px 10px #00f;
+      opacity: 0.7;
+    }
+    100% {
+      filter: blur(0px);
+      transform: rotate(0deg) scale(1);
+      box-shadow: 0 0 10px #0087cc;
+      opacity: 0.9;
+    }
+  }
+  
+  /* Animation trigger class */
+  .animated {
+    animation: logo-anim 2s forwards;
+  }
+  
